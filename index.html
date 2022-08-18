@@ -48,7 +48,64 @@
         #dot li:hover {opacity:1; cursor:pointer; }
 
 
-        .chart {
+        .page3Wrap {
+        position: relative;
+        padding: 2%;
+      }
+
+      .chart_container {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+      #page2 h1 { font-size: 60px; text-align: center; }
+
+      #page2 .chart {
+        position: relative;
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        transition: 0.3s;
+      }
+
+      #page2 span.center {
+        background: #fff;
+      
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 80px;
+        font-size: 15px;
+        transform: translate(-50%, -50%);
+      }
+
+      #page2 button {
+        width: 80px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+
+        .number {
+      width: 150px;
+      height: 150px;
+      margin: 0 auto;
+      background-color: #ffb611;
+      font-size: 100px;
+      list-style: none;
+      text-align: center;
+      margin-top: 50px;
+      color: #333;
+      border-radius: 50%;
+      }
+
+
+      #page3 .chart2 {
         position: relative;
         width: 800px;
         height: 800px;
@@ -57,7 +114,7 @@
         cursor: pointer;
       }
 
-      span.center {
+      #page3 span.center {
         background: #fff;
       
         position: absolute;
@@ -160,30 +217,95 @@
       </div>
       </header>
 
-      <script>
-          function setTextAnimation(delay, duration, strokeWidth, timingFunction, strokeColor,repeat) {
-          let paths = document.querySelectorAll("path");
-          let mode=repeat?'infinite':'forwards'
-          for (let i = 0; i < paths.length; i++) {
-              const path = paths[i];
-              const length = path.getTotalLength();
-              path.style["stroke-dashoffset"] = `${length}px`;
-              path.style["stroke-dasharray"] = `${length}px`;
-              path.style["stroke-width"] = `${strokeWidth}px`;
-              path.style["stroke"] = `${strokeColor}`;
-              path.style["animation"] = `${duration}s svg-text-anim ${mode} ${timingFunction}`;
-              path.style["animation-delay"] = `${i * delay}s`;
-              }
-          }
-          setTextAnimation(0.1,3.1,2.5,'linear','#ffffff',true);
-      </script>
+      <script src="js/avg_Subject.js"></script>
 
       <section class="page" id="page2">
-
+        <h1>Skils</h1>
+        <div class="page2Wrap">
+          <div class="chart_container">
+              <div class="chart doughnut1">
+                  <span class="center"><a class="Increase_number1"></a></span>
+              </div>
+              <div class="chart doughnut2">
+                  <span class="center"><a class="Increase_number2"></a></span>
+              </div>
+              <div class="chart doughnut3">
+                  <span class="center"><a class="Increase_number3"></a></span>
+              </div>
+          </div>
+        </div>
       </section>
 
+      <script>
+        const chart1 = document.querySelector('.doughnut1');
+        const chart2 = document.querySelector('.doughnut2');
+        const chart3 = document.querySelector('.doughnut3');
+
+        const makeChart = (percent, classname, color) => {
+          let i = 1;
+          let chartFn = setInterval(function() {
+            if (i < percent) {
+              colorFn(i, classname, color);
+              i++;
+            } else {
+              clearInterval(chartFn);
+            }
+          }, 10);
+        }
+
+        const colorFn = (i, classname, color) => {
+          classname.style.background = "conic-gradient(" + color + " 0% " + i + "%, #dedede " + i + "% 100%)";
+        }
+
+        makeChart(90, chart1, '#f5b914');
+        makeChart(50, chart2, '#0A174E');
+        makeChart(70, chart3, '#66d2ce');
+        </script>
+
+        <script>
+          	$(function() {
+		        var count1 = 0;
+            var count2 = 0;
+            var count3 = 0;
+		        counterFunc();
+                    
+		        function counterFunc() {
+            
+		          id1 = setInterval(count1Func, 15);
+              id2 = setInterval(count2Func, 27);
+              id3 = setInterval(count3Func, 18);
+            
+		          function count1Func() {
+		            count1++;
+		            if (count1 > 90) {
+		              clearInterval(id1);
+		            } else {
+		              $(".Increase_number1").text(count1+"%");
+		            }
+		          }
+              function count2Func() {
+		            count2++;
+		            if (count2 > 50) {
+		              clearInterval(id2);
+		            } else {
+		              $(".Increase_number2").text(count2+"%");
+		            }
+		          }
+              function count3Func() {
+		            count3++;
+		            if (count3 > 70) {
+		              clearInterval(id3);
+		            } else {
+		              $(".Increase_number3").text(count3+"%");
+		            }
+		          }
+
+		        }
+		      });
+        </script>
+
       <div id="page3" class="page">
-          <div class="chart doughnut1">
+          <div class="chart2 doughnut4">
               <span class="center"><a class="Increase_number1"></a></span>
           </div>
 
@@ -218,21 +340,21 @@
       <script>
         $(function(){
           $('#page3Wrap').hide();
-          $('.chart').click(function(){
-            $('.chart').fadeOut();
+          $('.chart2').click(function(){
+            $('.chart2').fadeOut();
             $('#page3Wrap').fadeIn();
           });
         });
       </script>
 
       <script>
-        const chart1 = document.querySelector('.doughnut1');
+        const chart4 = document.querySelector('.doughnut4');
 
-        const makeChart = (percent, classname, color) => {
+        const makeChart2 = (percent, classname, color) => {
           let i = 1;
           let chartFn = setInterval(function() {
             if (i < percent) {
-              colorFn(i, classname, color);
+              colorFn2(i, classname, color);
               i++;
             } else {
               clearInterval(chartFn);
@@ -240,72 +362,19 @@
           }, 10);
         }
 
-        const colorFn = (i, classname, color) => {
+        const colorFn2 = (i, classname, color) => {
           classname.style.background = "conic-gradient(" + color + " 0% " + i + "%, #dedede " + i + "% 100%)";
         }
 
-        const replay = () => {
-          makeChart(90, chart1, '#f5b914');
+        const replay2 = () => {
+          makeChart2(90, chart4, '#f5b914');
         }
 
-        makeChart(90, chart1, '#f5b914');
+        makeChart2(90, chart4, '#f5b914');
 
         </script>
 
-        <script>
-          const opt = {
-              scrollGauge: 0,
-              wrapClass: document.querySelector('div#page3Wrap'),
-              section: document.getElementsByClassName('portfolioImage'),
-              sectionHeight() {
-                  return this.section[0].clientHeight
-              },
-              maxValue() {
-                  return (this.section.length - 1) * this.sectionHeight()
-              },
-              currentSection() {
-                  return parseInt(opt.scrollGauge / opt.sectionHeight())
-              },
-              limitValidate() {
-                  if (this.scrollGauge < 0) this.scrollGauge = 0;
-                  else if (this.scrollGauge > this.maxValue()) this.scrollGauge = this.maxValue();
-              },
-              applyHeightValue(elem, idx, value) {
-                  elem.style.bottom = -(this.sectionHeight() * idx) + value + 'px'
-              },
-              initialTopValue(value) {
-                  [...this.section].forEach((elem, idx) => this.applyHeightValue(elem, idx, value))
-              },
-              scrollValue(value) {
-                  return this.sectionHeight() * value
-              },
-              controlSections(value) {
-                  this.initialTopValue(this.scrollValue(value));
-              },
-              changeSection(val) {
-                  return (opt.currentSection() - val) * opt.sectionHeight();
-              },
-              moveSectionWithinLimit() {
-                  this.limitValidate();
-                  this.controlSections(this.currentSection());
-              }
-          }
-          let btnHandler;
-          btnHandler = function (e) {
-              const target = e.target;
-              if (!target.classList.contains('UpDown')) return;
-              switch (target.textContent.toLowerCase()) {
-                  case 'up':
-                      opt.scrollGauge = opt.changeSection(1);
-                      break;
-                  case 'down':
-                      opt.scrollGauge = opt.changeSection(-1);
-                      break;
-              }
-              opt.moveSectionWithinLimit();
-          }
-          opt.initialTopValue(opt.currentSection());
-          window.addEventListener('click', btnHandler);
+        <script src="js/page3_ButtonHandler.js">
         </script>
 
       <footer class="page" id="page4">
@@ -313,120 +382,9 @@
       </footer>
     </div>
 
-    <script>
-      //js/dot.js
+    <script src="js/fullPage_dotControl.js"></script>
+     <script src="js/fullPage_Side.js"></script>
+     <script src="js/fullPage_ScrollControl.js"></script>
 
-   $(function(){
-
-     var dot = $("#dot ul li");
-     var contents = $("#page_wrap >.page");
-
-     dot.click(function(e){
-       e.preventDefault();
-       var target = $(this);
-       var index = target.index();
-       var section = contents.eq(index);
-       var offset = section.offset().top;
-
-       console.log(index);
-
-       $("html,body").animate({scrollTop:offset},600);
-     });
-
-
-     $(window).scroll(function(){
-
-     var wScroll = $(this).scrollTop();
-
-       if(wScroll >= contents.eq(0).offset().top){
-         dot.css({"background":"rgba(255,255,255,0.1)"});
-         dot.find("a").css({"background":"rgba(255,255,255,0.5)"});
-         dot.removeClass("active");
-         dot.eq(0).addClass("active");
-         dot.eq(0).find("a").css({"background":"#0cdaff"});
-       }
-   
-       if(wScroll >= contents.eq(1).offset().top){
-         dot.css({"background":"rgba(0,0,0,0.7)"});
-         dot.find("a").css({"background":"rgba(0,0,0,0.5)"});
-         dot.removeClass("active");
-         dot.eq(1).addClass("active");
-         dot.eq(1).find("a").css({"background":"#0189ff"});
-       }
-
-       if(wScroll >= contents.eq(2).offset().top){
-         dot.removeClass("active");
-         dot.find("a").css({"background":"rgba(0,0,0,0.5)"});
-         dot.eq(2).addClass("active");
-         dot.eq(2).find("a").css({"background":"#f0a91b"});
-       }
-   
-       if(wScroll >= contents.eq(3).offset().top){
-         dot.removeClass("active");
-         dot.find("a").css({"background":"rgba(0,0,0,0.5)"});
-         dot.eq(3).addClass("active");
-         dot.eq(3).find("a").css({"background":"#fff"});
-       }
-   
-   
-     });
-
-
-     return false;
-
-     });
-
-     </script>
-
-
-
-     <script>
-         //js/side.js
-     $(function(){
-
-     $('.wrap_af').hide();
-     $(".fa-bars").click(function(){
-       $("#side").animate({left:'0'},500);
-       $(this).fadeOut();
-       $('.wrap_af').fadeIn();
-     });
-
-
-     $(".fa-chevron-left").click(function(){
-       $("#side").animate({left:'-310'},500);
-       $(".fa-bars").fadeIn();
-       $('.wrap_af').fadeOut();
-     });
-
-
-
-     });
-
-     </script>
-
-
-
-     <script>
-         //js/mousewheel.js
-     $(function(){
-     var win_h = $(window).height();
-     $('.page').each(function(index){
-       $(this).attr("data-index",win_h * index);
-     });
-
-
-     $('.page').on("mousewheel",function(e){
-       var pagePos = parseInt($(this).attr("data-index"));
-       if(e.originalEvent.wheelDelta >=0 ){
-         $("html,body").stop().animate({scrollTop:pagePos - win_h});
-         return false;
-       } else if (e.originalEvent.wheelDelta < 0) {
-         $("html,body").stop().animate({scrollTop:pagePos + win_h});
-         return false;
-       }
-     });
-     });
-
-   </script>
 </body>
 </html>
