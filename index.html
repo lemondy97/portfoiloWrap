@@ -14,7 +14,7 @@
         header { width: 100%; height: 100vh; background-color: #111; }
         .svg-holder { text-align: center; margin: 0 auto;  }
 
-        section { width: 100%; height: 100vh; background-color: dodgerblue; }
+        section { width: 100%; height: 100vh; background-color: dodgerblue; position: relative; }
 
         #page3 { width: 100%; height: 100vh; text-align: center; background-color: orange; }
 
@@ -54,18 +54,25 @@
       }
 
       .chart_container {
-        display: flex;
         gap: 10px;
         margin-bottom: 10px;
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        height: 200px;
       }
       #page2 h1 { font-size: 60px; text-align: center; }
 
       #page2 .chart {
-        position: relative;
-        width: 160px;
-        height: 160px;
+        position: absolute;
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
         transition: 0.3s;
+        top: 50%;
+        left: 50%;
       }
 
       #page2 span.center {
@@ -74,8 +81,8 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
         border-radius: 50%;
         text-align: center;
         line-height: 80px;
@@ -103,6 +110,15 @@
       color: #333;
       border-radius: 50%;
       }
+
+      #page2 #clickButton_container { width: 50%; height: 625px; background-color: olivedrab; text-align: center; margin: 0 auto; border-radius: 10%; border: 2px solid lightgreen; position: relative; }
+      #clickButton_container .page2_clickButton { width: 100px; height: 100px; border: 4px solid #fff; cursor: pointer; border-radius: 25%; }
+      .page2_clickButton img { vertical-align: middle; transition: 0.3s; }
+      .page2_clickButton img:hover { transform: rotate(-20deg); }
+
+      #page2 #showContainer { width: 125px; height: 125px; position: absolute; top: 27.5%; left: 50%; transform: translate(-50%, -50%); }
+      #showContainer .showIcons { position: absolute; top: 0; left: 0; transition: 0.3s; cursor: pointer; }
+      .showIcons img:hover { transform: rotate(-20deg);  }
 
 
       #page3 .chart2 {
@@ -222,7 +238,36 @@
       <section class="page" id="page2">
         <h1>Skills</h1>
         <div class="page2Wrap">
-          <div class="chart_container">
+          <div id="clickButton_container">
+            <div class="page2_clickButton">
+              <img src="img/html.png" alt="html 로고" class="html">
+            </div>
+            <div class="page2_clickButton">
+              <img src="img/css.png" alt="css 로고" class="css">
+            </div>
+            <div class="page2_clickButton">
+              <img src="img/jquery.png" alt="Jquery 로고" class="jquery">
+            </div>
+            <div class="page2_clickButton">
+              <img src="img/javascript.png" alt="javascript 로고" class="javascript">
+            </div>
+
+            <div id="showContainer">
+              <div class="showIcons">
+                <img src="img/html_Big.png" alt="html 로고" class="showHtml">
+              </div>
+              <div class="showIcons">
+                <img src="img/css_Big.png" alt="css 로고" class="showCss">
+              </div>
+              <div class="showIcons">
+                <img src="img/jquery_Big.png" alt="Jquery 로고" class="showJquery">
+              </div>
+              <div class="showIcons">
+                <img src="img/javascript_Big.png" alt="javascript 로고" class="showJavascript">
+              </div>
+            </div>
+
+            <div class="chart_container">
               <div class="chart doughnut1">
                   <span class="center"><a class="Increase_number1"></a></span>
               </div>
@@ -232,19 +277,20 @@
               <div class="chart doughnut3">
                   <span class="center"><a class="Increase_number3"></a></span>
               </div>
+              <div class="chart doughnut4">
+                <span class="center"><a class="Increase_number4"></a></span>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <img src="img/html.png" alt="html 로고">
-        <img src="img/css.png" alt="css 로고">
-        <img src="img/jquery.png" alt="Jquery 로고">
-        <img src="img/javascript.png" alt="javascript 로고">
+        </div>
       </section>
 
       <script>
         const chart1 = document.querySelector('.doughnut1');
         const chart2 = document.querySelector('.doughnut2');
         const chart3 = document.querySelector('.doughnut3');
+        const chart4 = document.querySelector('.doughnut4');
 
         const makeChart = (percent, classname, color) => {
           let i = 1;
@@ -255,7 +301,7 @@
             } else {
               clearInterval(chartFn);
             }
-          }, 10);
+          }, 25);
         }
 
         const colorFn = (i, classname, color) => {
@@ -263,24 +309,48 @@
         }
 
         makeChart(90, chart1, '#f5b914');
-        makeChart(50, chart2, '#0A174E');
+        makeChart(80, chart2, '#0A174E');
         makeChart(70, chart3, '#66d2ce');
+        makeChart(65, chart4, '#98fb98');
+
+        const replay = () => {
+          makeChart(90, chart1, '#f5b914');
+          makeChart(80, chart2, '#0A174E');
+          makeChart(70, chart3, '#66d2ce');
+          makeChart(65, chart4, '#98fb98');
+        }
         </script>
 
         <script>
           	$(function() {
-		        var count1 = 0;
-            var count2 = 0;
-            var count3 = 0;
-		        counterFunc();
+
+              $('.doughnut2').hide();
+              $('.doughnut3').hide();
+              $('.doughnut4').hide();
+
+              $('.showHtml').hide();
+              $('.showCss').hide();
+              $('.showJquery').hide();
+              $('.showJavascript').hide();
+
+		        
+              var count1 = 0;
+              var count2 = 0;
+              var count3 = 0;
+              var count4 = 0;
+		        // counterFunc();
                     
-		        function counterFunc() {
+		        // function counterFunc() {
             
-		          id1 = setInterval(count1Func, 15);
-              id2 = setInterval(count2Func, 27);
-              id3 = setInterval(count3Func, 18);
+		          // id1 = setInterval(count1Func, 15);
+              // id2 = setInterval(count2Func, 27);
+              // id3 = setInterval(count3Func, 18);
+
+              
             
 		          function count1Func() {
+                
+                id1 = setInterval(count1Func, 15);
 		            count1++;
 		            if (count1 > 90) {
 		              clearInterval(id1);
@@ -289,14 +359,18 @@
 		            }
 		          }
               function count2Func() {
+                
+                id2 = setInterval(count2Func, 27);
 		            count2++;
-		            if (count2 > 50) {
+		            if (count2 > 80) {
 		              clearInterval(id2);
 		            } else {
 		              $(".Increase_number2").text(count2+"%");
 		            }
 		          }
               function count3Func() {
+                
+                id3 = setInterval(count3Func, 18);
 		            count3++;
 		            if (count3 > 70) {
 		              clearInterval(id3);
@@ -304,13 +378,81 @@
 		              $(".Increase_number3").text(count3+"%");
 		            }
 		          }
+              function count4Func() {
+                
+                id4 = setInterval(count4Func, 15);
+		            count4++;
+		            if (count4 > 65) {
+		              clearInterval(id4);
+		            } else {
+		              $(".Increase_number4").text(count4+"%");
+		            }
+		          }
 
-		        }
+		        // }
+            $('.html').click(function(){
+              $('.doughnut2').stop().fadeOut();
+              $('.doughnut3').stop().fadeOut();
+              $('.doughnut4').stop().fadeOut();
+              $('.doughnut1').stop().fadeIn(replay, count1Func());
+              $('.showCss').stop().fadeOut();
+              $('.showJquery').stop().fadeOut();
+              $('.showJavascript').stop().fadeOut();
+              $('.showHtml').stop().fadeIn();
+
+              // counterFunc();
+              // count1Func();
+            });
+            $('.css').click(function(){
+              $('.doughnut1').stop().fadeOut();
+              $('.doughnut3').stop().fadeOut();
+              $('.doughnut4').stop().fadeOut();
+              $('.doughnut2').stop().fadeIn(replay, count2Func());
+              $('.showHtml').stop().fadeOut();
+              $('.showJquery').stop().fadeOut();
+              $('.showJavascript').stop().fadeOut();
+              $('.showCss').stop().fadeIn();
+              
+
+              // counterFunc();
+              // count2Func();
+            });
+            $('.jquery').click(function(){
+              $('.doughnut1').stop().fadeOut();
+              $('.doughnut2').stop().fadeOut();
+              $('.doughnut4').stop().fadeOut();
+              $('.doughnut3').stop().fadeIn(replay, count3Func());
+              $('.showHtml').stop().fadeOut();
+              $('.showCss').stop().fadeOut();
+              $('.showJavascript').stop().fadeOut();
+              $('.showJquery').stop().fadeIn();
+
+              // counterFunc();
+              // count3Func();
+            });
+            $('.javascript').click(function(){
+              $('.doughnut1').stop().fadeOut();
+              $('.doughnut2').stop().fadeOut();
+              $('.doughnut3').stop().fadeOut();
+              $('.doughnut4').stop().fadeIn(replay, count4Func());
+              $('.showHtml').stop().fadeOut();
+              $('.showCss').stop().fadeOut();
+              $('.showJquery').stop().fadeOut();
+              $('.showJavascript').stop().fadeIn();
+              // counterFunc();
+              // count3Func();
+            });
 		      });
         </script>
 
+        <script>
+          $(function(){
+
+          });
+        </script>
+
       <div id="page3" class="page">
-          <div class="chart2 doughnut4">
+          <div class="chart2 doughnut5">
               <span class="center"><a class="Increase_number1"></a></span>
           </div>
 
@@ -353,7 +495,7 @@
       </script>
 
       <script>
-        const chart4 = document.querySelector('.doughnut4');
+        const chart5 = document.querySelector('.doughnut5');
 
         const makeChart2 = (percent, classname, color) => {
           let i = 1;
@@ -372,10 +514,10 @@
         }
 
         const replay2 = () => {
-          makeChart2(90, chart4, '#f5b914');
+          makeChart2(90, chart5, '#f5b914');
         }
 
-        makeChart2(90, chart4, '#f5b914');
+        makeChart2(90, chart5, '#f5b914');
 
         </script>
 
