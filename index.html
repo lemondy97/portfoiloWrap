@@ -5,7 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=10">
     <title>Jingyu's Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jomhuria&family=Rowdies&display=swap" rel="stylesheet">
+
+
     <style>
+
+        @font-face {
+        font-family: 'Eoe_Zno_M';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/Eoe_Zno_M.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'RIDIBatang';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
         ul, ol, li { list-style: none; }
         a { text-decoration: none; }
@@ -23,19 +47,19 @@
         canvas { position: absolute; z-index: -1; }
         footer { width: 100%; height: 100vh; }
 
-        #dot {width:80px; height:250px;  position:fixed; justify-content:center;
+        #dot {width:80px; height:250px;  position: fixed; justify-content:center;
         align-items:center; display:flex;
         top:50%; right:0px; transform:translatey(-50%); z-index:100;}
         #dot>ul {width:40px; height:220px;}
         #dot li {width:20px; height:20px; position:relative;
         display:block; margin:10px auto; border-radius:50%;
-        box-shadow:-0px 0px 5px rgba(255,255,255,0.1);}
+        box-shadow:-0px 0px 5px rgba(255,255,255,0.1); }
 
         #dot li a {background:rgba(255,255,255,0.7);
         transition:all 0.3s ease-in-out;
         top:0; left:0; width:100%; height:100%; outline:none; border-radius:50%;
         background-color:#fff; background:rgba(255,255,255,0.5);
-        cursor:pointer; position:absolute;}
+        cursor:pointer; position:absolute; }
 
         #dot ul .active {box-shadow:0 0 0 2px #0cdaff; }
         #dot ul li:nth-of-type(2).active {box-shadow:0 0 0 2px #0cdaff; }
@@ -63,7 +87,7 @@
         width: 200px;
         height: 200px;
       }
-      #page2 h1 { font-size: 60px; text-align: center; padding-top: 75px; padding-bottom: 25px; color: #fff; }
+      #page2 h1 { font-size: 60px; text-align: center; padding-top: 75px; padding-bottom: 25px; color: #fff; font-family: 'Rowdies', cursive; }
 
       #page2 .chart {
         position: absolute;
@@ -119,7 +143,7 @@
       #page2 #showContainer { width: 125px; height: 125px; position: absolute; top: 27.5%; left: 50%; transform: translate(-50%, -50%); }
       #showContainer .showIcons { position: absolute; top: 0; left: 0;  cursor: pointer; }
       .showIcons img { transition: 0.3s; }
-      .showIcons img:hover { transform: rotate(-40deg);  }
+      .showIcons img:hover { transform: rotate(-40deg); }
 
 
       #page3 .chart2 {
@@ -160,6 +184,7 @@
         .portfolioImage {
             height: 100%;
             width: 100%;
+            overflow: hidden;
             background-image: url(img/universe1.jpg);
             background-repeat: no-repeat;
         }
@@ -167,6 +192,17 @@
     
         .portfolioImage {
             position: relative;
+        }
+
+        .portfolioImage .noteBook { width: 800px; height: 599px; overflow: hidden; position: relative; margin: 0 auto;
+        background-image: url(img/notebookLayout.png); background-repeat: no-repeat;  }
+        .noteBook .movingBox { width: 594px; height: 369.5px; overflow: hidden; position: absolute; top: 4.7%; left: 12.95%; }
+        .movingBox img { animation: Full 6s linear infinite alternate; }
+
+
+        @keyframes Full{
+        0%{transform: translateY(0%);}
+        100%{transform: translateY(-50%);}
         }
     
         #page3Wrap .portfolioImage{
@@ -181,7 +217,13 @@
             z-index: 100;
         }
 
-        #page3Wrap button { width: 100px; height: 35px; }
+        #page3Wrap .UpDownBox {position: relative; margin:20px; box-shadow: 1px 1px 3px rgba(0,0,0,0.3); cursor: pointer; overflow: hidden; width:100px; height: 50px; background: linear-gradient( 120deg, #00008C 0%, #64A0FF ); border-radius:50px; }
+        .UpDownBox .UpDown {position: absolute; left: -200%; top:auto; bottom: 0; right: 0; background:linear-gradient( to left, #46AAFF	, #3C3C8C ); color: #fff; width:100px; height: 50px; transition: all 0.4s ease-in-out; font-size:28px; margin:20px 0 0 50px; font-family: 'Oleo Script Swash Caps', cursive; }
+        .UpDownBox:hover .UpDown {opacity:1; left: 0; margin:20px 0 0 0;}
+
+        #page3Wrap .hiddenText1, .hiddenText2, .hiddenText3, .hiddenText4, .hiddenText5 { display: none; position: absolute; top: 10%; right: 0%; font-size: 25px; color: #fff; width: 35%; height: 50%; font-family: 'RIDIBatang'; }
+
+        .hiddenText1, .hiddenText2, .hiddenText3, .hiddenText4, .hiddenText5 h1 { font-family: 'Eoe_Zno_M'; }
         
 
                                      
@@ -464,29 +506,87 @@
 
           <div id="page3Wrap">
             <div class="divs controlButton">
-                <button class="UpDown">Up</button>
-                <button class="UpDown">Down</button>
+              <div class="UpDownBox">
+                <div class="UpDown">Up</div>
+              </div>
+              <div class="UpDownBox">
+                <div class="UpDown">Down</div>
+              </div>
             </div>
+
             <div class="portfolioImage">
-                <img src="img/레고 반응형.jpeg">
-                <div style="font-size:54px;color:black !important"></div>
+
+              <div class="noteBook">
+                <div class="movingBox">
+                  <img src="img/이리나 베이커리.jpeg">
+                </div>
+              </div>
             </div>
+
             <div class="portfolioImage">
-                <img src="img/루브르 반응형.jpeg">
-                <div style="font-size:54px;color:black !important"></div>
+              <div class="noteBook">
+                <div class="movingBox">
+                  <img src="img/이탈리아 여행지.jpeg">
+                </div>
+              </div>
             </div>
+
             <div class="portfolioImage">
-                <img src="img/인터파크 ajax.jpeg">
-                <div style="font-size:54px;color:black !important"></div>
+              <div class="noteBook">
+                <div class="movingBox">
+                  <img src="img/루브르 반응형.jpeg">
+                </div>
+              </div>
             </div>
+
             <div class="portfolioImage">
-                <img src="img/이리나 베이커리.jpeg">
-                <div style="font-size:54px;color:black !important"></div>
+              <div class="noteBook">
+                <div class="movingBox">
+                  <img src="img/레고 반응형.jpeg">
+                </div>
+              </div>
             </div>
+
             <div class="portfolioImage">
-                <img src="img/이탈리아 여행지.jpeg">
-                <div style="font-size:54px;color:black !important"></div>
+              <div class="noteBook">
+                <div class="movingBox">
+                  <img src="img/인터파크 ajax.jpeg">
+                </div>
+              </div>
             </div>
+
+              
+            <div class="hiddenText1">
+              <h1>이리나 베이커리 쇼핑몰</h1>
+              <p>
+                제가 처음으로 제작한 홈페이지입니다.
+              </p>
+            </div>
+            <div class="hiddenText2">
+              <h1>시칠리아 여행 홍보페이지</h1>
+              <p>
+                팀작업으로 제작한 홈페이지입니다.
+              </p>
+            </div>
+            <div class="hiddenText3">
+              <h1>루브르 박물관 홈페이지</h1>
+              <p>
+                제가 제작한 첫번째 반응형웹으로 구현한 홈페이지입니다.
+              </p>
+            </div>
+            <div class="hiddenText4">
+              <h1>레고 브랜드 홈페이지</h1>
+              <p>
+                제가 제작한 두번째 반응형웹으로 구현한 홈페이지입니다.
+              </p>
+            </div>
+            <div class="hiddenText5">
+              <h1>인터파크 서점 홈페이지</h1>
+              <p>
+                ajax를 활용하여 만든 홈페이지입니다.
+              </p>
+            </div>
+
         </div>
       </div>
 
@@ -496,6 +596,7 @@
           $('.chart2').click(function(){
             $('.chart2').fadeOut();
             $('#page3Wrap').fadeIn();
+            $('.hiddenText1').fadeIn();
           });
         });
       </script>
