@@ -23,33 +23,23 @@
      var wScroll = $(this).scrollTop();
 
        if(wScroll >= contents.eq(0).offset().top){
-         dot.css({"background":"rgba(255,255,255,0.1)"});
-         dot.find("a").css({"background":"rgba(255,255,255,0.5)"});
          dot.removeClass("active");
          dot.eq(0).addClass("active");
-         dot.eq(0).find("a").css({"background":"#0cdaff"});
        }
    
        if(wScroll >= contents.eq(1).offset().top){
-         dot.css({"background":"rgba(255,255,255,0.75)"});
-         dot.find("a").css({"background":"rgba(0,0,0,0.5)"});
          dot.removeClass("active");
          dot.eq(1).addClass("active");
-         dot.eq(1).find("a").css({"background":"#0cdaff"});
        }
 
        if(wScroll >= contents.eq(2).offset().top){
          dot.removeClass("active");
-         dot.find("a").css({"background":"rgba(0,0,0,0.5)"});
          dot.eq(2).addClass("active");
-         dot.eq(2).find("a").css({"background":"#0cdaff"});
        }
    
        if(wScroll >= contents.eq(3).offset().top){
          dot.removeClass("active");
-         dot.find("a").css({"background":"rgba(0,0,0,0.5)"});
          dot.eq(3).addClass("active");
-         dot.eq(3).find("a").css({"background":"#0cdaff"});
        }
    
    
