@@ -215,6 +215,10 @@
         .hiddenText h1 { font-family: 'Eoe_Zno_M'; padding-bottom: 30px; padding-top: 270px; }
         .hiddenText b { color: #FF5675; }
 
+        #page3Wrap #dotContainer2 { text-align: center; position: absolute; top: 92%; left: 31.2%; }
+        #page3Wrap .dot2 { width: 20px; height: 20px; margin: 0 2px; background-color: #bbb; border-radius: 50%; display: inline-block; transition: background-color 0.5s ease; }
+        .active2 { background-color: darkturquoise; }
+
         footer .page4_subject { font-size: 60px; text-align: center; padding-top: 75px; padding-bottom: 25px; color: #fff; font-family: 'Rowdies', cursive; }
         footer .pictureBox { background-color: greenyellow; width: 200px; height: 300px; margin: 0 auto; }
         footer .explain { color: #fff; text-align: center; font-family: 'RIDIBatang'; }
@@ -375,68 +379,9 @@
         </div>
       </section>
 
-      <script>
-        const chart1 = document.querySelector('.doughnut1');
-        const chart2 = document.querySelector('.doughnut2');
-        const chart3 = document.querySelector('.doughnut3');
-        const chart4 = document.querySelector('.doughnut4');
-        const chart5 = document.querySelector('.doughnut5');
-
-        const makeChart = (percent, classname, color) => {
-          let i = 1;
-          let chartFn = setInterval(function() {
-            if (i < percent) {
-              colorFn(i, classname, color);
-              i++;
-            } else {
-              clearInterval(chartFn);
-            }
-          }, 25);
-        }
-
-        const colorFn = (i, classname, color) => {
-          classname.style.background = "conic-gradient(" + color + " 0% " + i + "%, #dedede " + i + "% 100%)";
-        }
-
-        makeChart(90, chart1, '#f5b914');
-        makeChart(85, chart2, '#0A174E');
-        makeChart(75, chart3, '#66d2ce');
-        makeChart(65, chart4, '#98fb98');
-        makeChart(60, chart5, '#98fb98');
-
-        const replay = () => {
-          makeChart(90, chart1, '#f5b914');
-          makeChart(85, chart2, '#0A174E');
-          makeChart(75, chart3, '#66d2ce');
-          makeChart(65, chart4, '#98fb98');
-          makeChart(60, chart5, '#98fb98');
-        }
-        </script>
-
+      <script src="js/donutChart_fill.js"></script>
+      <script src="js/donutChart_click.js"></script>
         <script>
-          	$(function() {
-
-              
-              $('.doughnut2').hide();
-              $('.doughnut3').hide();
-              $('.doughnut4').hide();
-              $('.doughnut5').hide();
-
-              $('.showCss').hide();
-              $('.showJquery').hide();
-              $('.showJavascript').hide();
-              $('.showSass').hide();
-
-              $('.showTextCss').hide();
-              $('.showTextJs').hide();
-              $('.showTextJq').hide();
-              $('.showTextSass').hide();
-		        
-              var count1 = 0;
-              var count2 = 0;
-              var count3 = 0;
-              var count4 = 0;
-              var count5 = 0;
 		        // counterFunc();
                     
 		        // function counterFunc() {
@@ -447,159 +392,58 @@
 
               
             
-		          function count1Func() {
+		          // function count1Func() {
                 
-                id1 = setInterval(count1Func, 30);
-		            count1++;
-		            if (count1 > 90) {
-		              clearInterval(id1);
-		            } else {
-		              $(".Increase_number1").text(count1+"%");
-		            }
-		          }
-              function count2Func() {
+              //   id1 = setInterval(count1Func, 30);
+		          //   count1++;
+		          //   if (count1 > 90) {
+		          //     clearInterval(id1);
+		          //   } else {
+		          //     $(".Increase_number1").text(count1+"%");
+		          //   }
+		          // }
+              // function count2Func() {
                 
-                id2 = setInterval(count2Func, 54);
-		            count2++;
-		            if (count2 > 85) {
-		              clearInterval(id2);
-		            } else {
-		              $(".Increase_number2").text(count2+"%");
-		            }
-		          }
-              function count3Func() {
+              //   id2 = setInterval(count2Func, 54);
+		          //   count2++;
+		          //   if (count2 > 85) {
+		          //     clearInterval(id2);
+		          //   } else {
+		          //     $(".Increase_number2").text(count2+"%");
+		          //   }
+		          // }
+              // function count3Func() {
                 
-                id3 = setInterval(count3Func, 36);
-		            count3++;
-		            if (count3 > 75) {
-		              clearInterval(id3);
-		            } else {
-		              $(".Increase_number3").text(count3+"%");
-		            }
-		          }
-              function count4Func() {
+              //   id3 = setInterval(count3Func, 36);
+		          //   count3++;
+		          //   if (count3 > 75) {
+		          //     clearInterval(id3);
+		          //   } else {
+		          //     $(".Increase_number3").text(count3+"%");
+		          //   }
+		          // }
+              // function count4Func() {
                 
-                id4 = setInterval(count4Func, 30);
-		            count4++;
-		            if (count4 > 65) {
-		              clearInterval(id4);
-		            } else {
-		              $(".Increase_number4").text(count4+"%");
-		            }
-		          }
-              function count5Func() {
+              //   id4 = setInterval(count4Func, 30);
+		          //   count4++;
+		          //   if (count4 > 65) {
+		          //     clearInterval(id4);
+		          //   } else {
+		          //     $(".Increase_number4").text(count4+"%");
+		          //   }
+		          // }
+              // function count5Func() {
                 
-                id5 = setInterval(count5Func, 30);
-		            count5++;
-		            if (count5 > 60) {
-		              clearInterval(id5);
-		            } else {
-		              $(".Increase_number5").text(count5+"%");
-		            }
-		          }
+              //   id5 = setInterval(count5Func, 30);
+		          //   count5++;
+		          //   if (count5 > 60) {
+		          //     clearInterval(id5);
+		          //   } else {
+		          //     $(".Increase_number5").text(count5+"%");
+		          //   }
+		          // }
 
 		        // }
-            $('.html').click(function(){
-              $('.doughnut2').stop().fadeOut();
-              $('.doughnut3').stop().fadeOut();
-              $('.doughnut4').stop().fadeOut();
-              $('.doughnut5').stop().fadeOut();
-              $('.doughnut1').stop().fadeIn(replay, count1Func());
-              $('.showCss').stop().fadeOut();
-              $('.showJquery').stop().fadeOut();
-              $('.showJavascript').stop().fadeOut();
-              $('.showSass').stop().fadeOut();
-              $('.showHtml').stop().fadeIn();
-              $('.showTextCss').stop().fadeOut();
-              $('.showTextJs').stop().fadeOut();
-              $('.showTextJq').stop().fadeOut();
-              $('.showTextSass').stop().fadeOut();
-              $('.showTextHtml').stop().fadeIn();
-
-              // counterFunc();
-              // count1Func();
-            });
-            $('.css').click(function(){
-              $('.doughnut1').stop().fadeOut();
-              $('.doughnut3').stop().fadeOut();
-              $('.doughnut4').stop().fadeOut();
-              $('.doughnut5').stop().fadeOut();
-              $('.doughnut2').stop().fadeIn(replay, count2Func());
-              $('.showHtml').stop().fadeOut();
-              $('.showJquery').stop().fadeOut();
-              $('.showJavascript').stop().fadeOut();
-              $('.showSass').stop().fadeOut();
-              $('.showCss').stop().fadeIn();
-              $('.showTextHtml').stop().fadeOut();
-              $('.showTextJs').stop().fadeOut();
-              $('.showTextJq').stop().fadeOut();
-              $('.showTextSass').stop().fadeOut();
-              $('.showTextCss').stop().fadeIn();
-              
-
-              // counterFunc();
-              // count2Func();
-            });
-            $('.jquery').click(function(){
-              $('.doughnut1').stop().fadeOut();
-              $('.doughnut2').stop().fadeOut();
-              $('.doughnut4').stop().fadeOut();
-              $('.doughnut5').stop().fadeOut();
-              $('.doughnut3').stop().fadeIn(replay, count3Func());
-              $('.showHtml').stop().fadeOut();
-              $('.showCss').stop().fadeOut();
-              $('.showJavascript').stop().fadeOut();
-              $('.showSass').stop().fadeOut();
-              $('.showJquery').stop().fadeIn();
-              $('.showTextHtml').stop().fadeOut();
-              $('.showTextCss').stop().fadeOut();
-              $('.showTextJs').stop().fadeOut();
-              $('.showTextSass').stop().fadeOut();
-              $('.showTextJq').stop().fadeIn();
-
-              // counterFunc();
-              // count3Func();
-            });
-            $('.javascript').click(function(){
-              $('.doughnut1').stop().fadeOut();
-              $('.doughnut2').stop().fadeOut();
-              $('.doughnut3').stop().fadeOut();
-              $('.doughnut5').stop().fadeOut();
-              $('.doughnut4').stop().fadeIn(replay, count4Func());
-              $('.showHtml').stop().fadeOut();
-              $('.showCss').stop().fadeOut();
-              $('.showJquery').stop().fadeOut();
-              $('.showSass').stop().fadeOut();
-              $('.showJavascript').stop().fadeIn();
-              $('.showTextHtml').stop().fadeOut();
-              $('.showTextCss').stop().fadeOut();
-              $('.showTextJq').stop().fadeOut();
-              $('.showTextSass').stop().fadeOut();
-              $('.showTextJs').stop().fadeIn();
-              // counterFunc();
-              // count3Func();
-            });
-
-            $('.sass').click(function(){
-              $('.doughnut1').stop().fadeOut();
-              $('.doughnut2').stop().fadeOut();
-              $('.doughnut3').stop().fadeOut();
-              $('.doughnut4').stop().fadeOut();
-              $('.doughnut5').stop().fadeIn(replay, count5Func());
-              $('.showHtml').stop().fadeOut();
-              $('.showCss').stop().fadeOut();
-              $('.showJquery').stop().fadeOut();
-              $('.showJavascript').stop().fadeOut();
-              $('.showSass').stop().fadeIn();
-              $('.showTextHtml').stop().fadeOut();
-              $('.showTextCss').stop().fadeOut();
-              $('.showTextJq').stop().fadeOut();
-              $('.showTextJs').stop().fadeOut();
-              $('.showTextSass').stop().fadeIn();
-              // counterFunc();
-              // count3Func();
-            });
-		      });
         </script>
         
 
@@ -619,27 +463,27 @@
               <div class="noteBook">
                 <div class="movingBox">
                   <a href="https://lemondy97.github.io/porfolio3/" target="_blank">
-                    <img src="img/레고 반응형.jpeg" class="movingImage">
+                    <img src="img/레고 반응형.jpeg" class="movingImage" alt="레고 홈페이지">
                   </a>
                 </div>
                 <div class="movingBox">
                   <a href="https://lemondy97.github.io/portfolio2/" target="_blank">
-                    <img src="img/루브르 반응형.jpeg" class="movingImage">
+                    <img src="img/루브르 반응형.jpeg" class="movingImage" alt="루브르 홈페이지">
                   </a>
                 </div>
                 <div class="movingBox">
                   <a href="https://lemondy97.github.io/shoppingmall/" target="_blank">
-                    <img src="img/이리나 베이커리.jpeg" class="movingImage">
+                    <img src="img/이리나 베이커리.jpeg" class="movingImage" alt="제빵 홈페이지">
                   </a>
                 </div>
                 <div class="movingBox">
                   <a href="https://teamprojectitaly.netlify.app/sub2.html" target="_blank">
-                    <img src="img/이탈리아 여행지.jpeg" class="movingImage">
+                    <img src="img/이탈리아 여행지.jpeg" class="movingImage" alt="여행사 홈페이지">
                   </a>
                 </div>
                 <div class="movingBox">
                   <a href="https://lemondy97.github.io/Ajax_bookStore/" target="_blank">
-                    <img src="img/인터파크 ajax.jpeg" class="movingImage">
+                    <img src="img/인터파크 ajax.jpeg" class="movingImage" alt="인터파크 홈페이지">
                   </a>
                 </div>
               </div>
@@ -701,8 +545,16 @@
               </p>
             </div>
 
+            <div id="dotContainer2">
+              <span class="dot2"></span>
+              <span class="dot2"></span>
+              <span class="dot2"></span>
+              <span class="dot2"></span>
+              <span class="dot2"></span>
+            </div>
         </div>
       </div>
+
       
       
 
