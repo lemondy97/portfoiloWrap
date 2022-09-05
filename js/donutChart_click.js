@@ -17,98 +17,98 @@ $(function() {
       
 
   $('.html').click(function(){
-    $('.doughnut2').stop().fadeOut();
-    $('.doughnut3').stop().fadeOut();
-    $('.doughnut4').stop().fadeOut();
-    $('.doughnut5').stop().fadeOut();
-    $('.doughnut1').stop().fadeIn(replay);
-    $('.showCss').stop().fadeOut();
-    $('.showJquery').stop().fadeOut();
-    $('.showJavascript').stop().fadeOut();
-    $('.showSass').stop().fadeOut();
-    $('.showHtml').stop().fadeIn();
-    $('.showTextCss').stop().fadeOut();
-    $('.showTextJs').stop().fadeOut();
-    $('.showTextJq').stop().fadeOut();
-    $('.showTextSass').stop().fadeOut();
-    $('.showTextHtml').stop().fadeIn();
+    $('.doughnut2').stop().hide();
+    $('.doughnut3').stop().hide();
+    $('.doughnut4').stop().hide();
+    $('.doughnut5').stop().hide();
+    $('.doughnut1').stop().show(replay);
+    $('.showCss').stop().hide();
+    $('.showJquery').stop().hide();
+    $('.showJavascript').stop().hide();
+    $('.showSass').stop().hide();
+    $('.showHtml').stop().show();
+    $('.showTextCss').stop().hide();
+    $('.showTextJs').stop().hide();
+    $('.showTextJq').stop().hide();
+    $('.showTextSass').stop().hide();
+    $('.showTextHtml').stop().show();
 
 
   });
   $('.css').click(function(){
-    $('.doughnut1').stop().fadeOut();
-    $('.doughnut3').stop().fadeOut();
-    $('.doughnut4').stop().fadeOut();
-    $('.doughnut5').stop().fadeOut();
-    $('.doughnut2').stop().fadeIn(replay);
-    $('.showHtml').stop().fadeOut();
-    $('.showJquery').stop().fadeOut();
-    $('.showJavascript').stop().fadeOut();
-    $('.showSass').stop().fadeOut();
-    $('.showCss').stop().fadeIn();
-    $('.showTextHtml').stop().fadeOut();
-    $('.showTextJs').stop().fadeOut();
-    $('.showTextJq').stop().fadeOut();
-    $('.showTextSass').stop().fadeOut();
-    $('.showTextCss').stop().fadeIn();
+    $('.doughnut1').stop().hide();
+    $('.doughnut3').stop().hide();
+    $('.doughnut4').stop().hide();
+    $('.doughnut5').stop().hide();
+    $('.doughnut2').stop().show(replay);
+    $('.showHtml').stop().hide();
+    $('.showJquery').stop().hide();
+    $('.showJavascript').stop().hide();
+    $('.showSass').stop().hide();
+    $('.showCss').stop().show();
+    $('.showTextHtml').stop().hide();
+    $('.showTextJs').stop().hide();
+    $('.showTextJq').stop().hide();
+    $('.showTextSass').stop().hide();
+    $('.showTextCss').stop().show();
     
 
 
   });
   $('.jquery').click(function(){
-    $('.doughnut1').stop().fadeOut();
-    $('.doughnut2').stop().fadeOut();
-    $('.doughnut4').stop().fadeOut();
-    $('.doughnut5').stop().fadeOut();
-    $('.doughnut3').stop().fadeIn(replay);
-    $('.showHtml').stop().fadeOut();
-    $('.showCss').stop().fadeOut();
-    $('.showJavascript').stop().fadeOut();
-    $('.showSass').stop().fadeOut();
-    $('.showJquery').stop().fadeIn();
-    $('.showTextHtml').stop().fadeOut();
-    $('.showTextCss').stop().fadeOut();
-    $('.showTextJs').stop().fadeOut();
-    $('.showTextSass').stop().fadeOut();
-    $('.showTextJq').stop().fadeIn();
+    $('.doughnut1').stop().hide();
+    $('.doughnut2').stop().hide();
+    $('.doughnut4').stop().hide();
+    $('.doughnut5').stop().hide();
+    $('.doughnut3').stop().show(replay);
+    $('.showHtml').stop().hide();
+    $('.showCss').stop().hide();
+    $('.showJavascript').stop().hide();
+    $('.showSass').stop().hide();
+    $('.showJquery').stop().show();
+    $('.showTextHtml').stop().hide();
+    $('.showTextCss').stop().hide();
+    $('.showTextJs').stop().hide();
+    $('.showTextSass').stop().hide();
+    $('.showTextJq').stop().show();
 
 
   });
   $('.javascript').click(function(){
-    $('.doughnut1').stop().fadeOut();
-    $('.doughnut2').stop().fadeOut();
-    $('.doughnut3').stop().fadeOut();
-    $('.doughnut5').stop().fadeOut();
-    $('.doughnut4').stop().fadeIn(replay);
-    $('.showHtml').stop().fadeOut();
-    $('.showCss').stop().fadeOut();
-    $('.showJquery').stop().fadeOut();
-    $('.showSass').stop().fadeOut();
-    $('.showJavascript').stop().fadeIn();
-    $('.showTextHtml').stop().fadeOut();
-    $('.showTextCss').stop().fadeOut();
-    $('.showTextJq').stop().fadeOut();
-    $('.showTextSass').stop().fadeOut();
-    $('.showTextJs').stop().fadeIn();
+    $('.doughnut1').stop().hide();
+    $('.doughnut2').stop().hide();
+    $('.doughnut3').stop().hide();
+    $('.doughnut5').stop().hide();
+    $('.doughnut4').stop().show(replay);
+    $('.showHtml').stop().hide();
+    $('.showCss').stop().hide();
+    $('.showJquery').stop().hide();
+    $('.showSass').stop().hide();
+    $('.showJavascript').stop().show();
+    $('.showTextHtml').stop().hide();
+    $('.showTextCss').stop().hide();
+    $('.showTextJq').stop().hide();
+    $('.showTextSass').stop().hide();
+    $('.showTextJs').stop().show();
 
   });
 
   $('.sass').click(function(){
-    $('.doughnut1').stop().fadeOut();
-    $('.doughnut2').stop().fadeOut();
-    $('.doughnut3').stop().fadeOut();
-    $('.doughnut4').stop().fadeOut();
-    $('.doughnut5').stop().fadeIn(replay);
-    $('.showHtml').stop().fadeOut();
-    $('.showCss').stop().fadeOut();
-    $('.showJquery').stop().fadeOut();
-    $('.showJavascript').stop().fadeOut();
-    $('.showSass').stop().fadeIn();
-    $('.showTextHtml').stop().fadeOut();
-    $('.showTextCss').stop().fadeOut();
-    $('.showTextJq').stop().fadeOut();
-    $('.showTextJs').stop().fadeOut();
-    $('.showTextSass').stop().fadeIn();
+    $('.doughnut1').stop().hide();
+    $('.doughnut2').stop().hide();
+    $('.doughnut3').stop().hide();
+    $('.doughnut4').stop().hide();
+    $('.doughnut5').stop().show(replay);
+    $('.showHtml').stop().hide();
+    $('.showCss').stop().hide();
+    $('.showJquery').stop().hide();
+    $('.showJavascript').stop().hide();
+    $('.showSass').stop().show();
+    $('.showTextHtml').stop().hide();
+    $('.showTextCss').stop().hide();
+    $('.showTextJq').stop().hide();
+    $('.showTextJs').stop().hide();
+    $('.showTextSass').stop().show();
 
   });
     });

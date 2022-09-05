@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+ 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=10">
@@ -87,8 +88,8 @@
         gap: 10px;
         margin-bottom: 10px;
         position: absolute;
-        top: 40%;
-        left: 40%;
+        top: 55%;
+        left: 50%;
         transform: translate(-50%, -50%);
         width: 200px;
         height: 200px;
@@ -97,12 +98,12 @@
 
       #page2 .chart {
         position: absolute;
+        top: 0;
+        left: 0;
         width: 200px;
         height: 200px;
         border-radius: 50%;
-        transition: 0.3s;
-        top: 50%;
-        left: 50%;
+
       }
 
       #page2 span.center {
@@ -219,9 +220,48 @@
         #page3Wrap .dot2 { width: 20px; height: 20px; margin: 0 2px; background-color: #bbb; border-radius: 50%; display: inline-block; transition: background-color 0.5s ease; }
         #page3Wrap .active2 { background-color: darkturquoise; }
 
+        footer #introduceContainer { width: 75%; height: 750px; background-image: linear-gradient(45deg, #874da2 0%, #c43a30 100%); text-align: center; margin: 0 auto; border-radius: 10%; border: 1px solid sandybrown; position: relative; }
+
         footer .page4_subject { font-size: 60px; text-align: center; padding-top: 75px; padding-bottom: 25px; color: #fff; font-family: 'Rowdies', cursive; }
-        footer .pictureBox { background-color: greenyellow; width: 200px; height: 300px; margin: 0 auto; }
-        footer .explain { color: #fff; text-align: center; font-family: 'RIDIBatang'; }
+        footer .pictureBox { background-color: white; width: 300px; height: 300px; margin: 0 auto; border-radius: 50%; margin-bottom: 25px; margin-top: 25px; }
+        footer .hiddenExplain1, .hiddenExplain2, .hiddenExplain3, .hiddenExplain4, .hiddenExplain5, .hiddenExplain6 { text-align: center; font-family: 'RIDIBatang'; opacity: 0; transition: all 0.5s; }
+        footer .hiddenExplain1 { position: absolute; top: 52%; left: -0.5%; color: #333; width: 100%; font-size: 25px;  }
+        footer .hiddenExplain2 { position: absolute; top: 22%; left: 25%; color: #fff; width: 100%; font-size: 25px;  }
+        footer .hiddenExplain3 { position: absolute; top: 22%; left: 5.5%; color: #fff; width: 88%; font-size: 23px;  }
+        footer .hiddenExplain4 { position: absolute; top: 22%; left: 17%; color: #fff; width: 100%; font-size: 20.5px;  }
+        footer .hiddenExplain5 { position: absolute; top: 22%; left: -0.5%; color: #fff; width: 100%; font-size: 25px;  }
+        footer .hiddenExplain6 { position: absolute; top: 22%; left: 20%; color: #fff; width: 60%; font-size: 25px;  }
+
+        footer .hoverBox { width: 200px; height: 150px; cursor: pointer; background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%); border-radius: 25%; transition: all 0.5s ease; }
+        .hoverBox img { transition: all 0.5s; }
+
+        .hoverBox:nth-of-type(2) { position: absolute; top: 50%; left:7.5%; }
+        .hoverBox:nth-of-type(2) img { margin-top: 25px; }
+        .hoverBox:nth-of-type(2):hover .hiddenExplain1 { opacity: 1; }
+        .hoverBox:nth-of-type(3) { position: absolute; top: 50%; left: 27.5%; }
+        .hoverBox:nth-of-type(3):hover { width: 300px; }
+        .hoverBox:nth-of-type(3) img { margin-top: 8px; }
+        .hoverBox:nth-of-type(3):hover img { opacity: 0; }
+        .hoverBox:nth-of-type(3):hover .hiddenExplain2 { opacity: 1; width: 50%; }
+        .hoverBox:nth-of-type(4) { position: absolute; top: 50%; left: 52.5%; }
+        .hoverBox:nth-of-type(4):hover { width: 300px; }
+        .hoverBox:nth-of-type(4) img { margin-top: 10px; margin-left: 5px; }
+        .hoverBox:nth-of-type(4):hover img { opacity: 0; }
+        .hoverBox:nth-of-type(4):hover .hiddenExplain3 { opacity: 1; }
+        .hoverBox:nth-of-type(5) { position: absolute; top: 50%; left: 77.5%; }
+        .hoverBox:nth-of-type(5):hover { width: 300px; }
+        .hoverBox:nth-of-type(5):hover img { opacity: 0; }
+        .hoverBox:nth-of-type(5):hover .hiddenExplain4 { opacity: 1; width: 67%; }
+        .hoverBox:nth-of-type(6) { position: absolute; top: 75%; left: 27.5%; }
+        .hoverBox:nth-of-type(6):hover { width: 300px; }
+        .hoverBox:nth-of-type(6) img { margin-top: 15px; }
+        .hoverBox:nth-of-type(6):hover img { opacity: 0; }
+        .hoverBox:nth-of-type(6):hover .hiddenExplain5 { opacity: 1; }
+        .hoverBox:nth-of-type(7) { position: absolute; top: 75%; left: 52.5%; }
+        .hoverBox:nth-of-type(7):hover { width: 300px; }
+        .hoverBox:nth-of-type(7) img { margin-top: 20px; }
+        .hoverBox:nth-of-type(7):hover img { opacity: 0; }
+        .hoverBox:nth-of-type(7):hover .hiddenExplain6 { opacity: 1;  }
 
                                      
         @-webkit-keyframes svg-text-anim {
@@ -268,6 +308,16 @@
 
     </style>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+
+     <!-- Google tag (gtag.js) -->
+     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BFYRNZ0TP1"></script>
+     <script>
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+     
+       gtag('config', 'G-BFYRNZ0TP1');
+     </script>
 </head>
 <body>
   
@@ -492,7 +542,7 @@
             <div class="hiddenText">
               <h1>레고 브랜드 홈페이지</h1>
               <p>
-                제가 제작한 두번째 반응형웹으로 구현한 홈페이지입니다.
+                제가 제작한 두번째 반응형웹으로 구현한 홈페이지입니다.<br>
                 반응형웹으로 만들어서 데스크탑, 태블릿, 모바일에
                 맞추어 3가지 css 파일로 나뉘어서 있습니다.
                 Swiper, grid로 이미지를 끌어당기기, 스크롤 애니메이션 등 여러가지 JS 기능을 넣었습니다.<br><br>
@@ -503,10 +553,10 @@
             <div class="hiddenText" style="display:none;">
               <h1>루브르 박물관 홈페이지</h1>
               <p>
-                제가 두번째로 제작한 홈페이지입니다.
+                제가 두번째로 제작한 홈페이지입니다.<br>
                 반응형웹으로 만들어서 데스크탑, 태블릿, 모바일에
                 맞추어 3가지 css 파일로 나뉘어서 있습니다.
-                가로 슬라이드, 마우스를 가져다대면 움직이는 이미지, 팝업 이미지 등의
+                가로 슬라이드, 마우스를 가져다대면 움직이는 이미지, &emsp;&emsp;팝업 이미지 등의
                 여러가지 js 기능을 넣었습니다.
                 <br><br>
                 <b>노트북 화면을 클릭하면 홈페이지로 이동합니다!</b>
@@ -516,10 +566,10 @@
             <div class="hiddenText" style="display:none;">
               <h1>이리나 베이커리 쇼핑몰</h1>
               <p>
-                제가 처음으로 제작한 홈페이지입니다.
+                제가 처음으로 제작한 홈페이지입니다.<br>
                 Animation 기능을 넣어서 주제가 위아래로 움직이게 하였고
                 flex를 활용하여 레이아웃을 맞추었고 테이블 태그를 사용해서
-                상품 상세정보와 게시판을 만들었습니다.
+                상품 상세정보와 게시판을 &emsp;&emsp;만들었습니다.
                 <br><br>
               <b>노트북 화면을 클릭하면 홈페이지로 이동합니다!</b>
               </p>
@@ -527,7 +577,7 @@
             <div class="hiddenText" style="display:none;">
               <h1>시칠리아 여행 홍보페이지</h1>
               <p>
-                팀작업으로 제작한 홈페이지입니다.
+                팀작업으로 제작한 홈페이지입니다.<br>
                 여행사 홍보 목적의 홈페이지 성격을 띄고있습니다.
                 버튼 Hover 효과, 슬라이드 이미지, transition과 opacity 설정 등의 기능을 넣었습니다.<br><br>
                 <b>노트북 화면을 클릭하면 홈페이지로 이동합니다!</b>
@@ -537,9 +587,9 @@
             <div class="hiddenText" style="display:none;">
               <h1>인터파크 서점 홈페이지</h1>
               <p>
-                ajax를 활용하여 만든 홈페이지입니다.
+                ajax를 활용하여 만든 홈페이지입니다.<br>
                 온라인 서점의 성격을 띄고있습니다.
-                ajax로 직접 가져오거나 쓰는 것이 아닌 
+                ajax로 직접 가져오거나 쓰는 것이 아닌 &emsp;
                 이미지를 불러오거나 텍스트를 불러왔습니다.<br><br>
                 <b>노트북 화면을 클릭하면 홈페이지로 이동합니다!</b>
               </p>
@@ -563,12 +613,41 @@
 
       <footer class="page" id="page4">
         <h1 class="page4_subject">About Me & Contact</h1>
-        <div class="pictureBox">
+        <div id="introduceContainer">
+          <div class="pictureBox">
+          </div>
+          <div class="hoverBox">
+            <img src="img/Name_plate.png" alt="네임플레이트 이미지">
+            <p class="hiddenExplain1">최진규</p>
+          </div>
+          <div class="hoverBox">
+            <img src="img/birth.png" alt="생일케이크 이미지">
+            <p class="hiddenExplain2">생년월일: 1997.05.08</p>
+          </div>
+          <div class="hoverBox">
+            <img src="img/college.png" alt="대학교 이미지">
+            <p class="hiddenExplain3">학력: 안산대학교 컴퓨터 정보학과 졸업(2년)</p>
+          </div>
+          <div class="hoverBox">
+            <img src="img/address.png" alt="주소 이미지">
+            <p class="hiddenExplain4">&emsp;&emsp;&emsp;&nbsp;거주지: &emsp;&emsp;&nbsp;경기도 안산시 상록구</p>
+          </div>
+          <div class="hoverBox">
+            <img src="img/gmail.png" alt="gmail 이미지">
+            <p class="hiddenExplain5">이메일: lemondy97@gmail.com</p>
+          </div>
+          <div class="hoverBox">
+            <img src="img/phone.png" alt="핸드폰 이미지">
+            <p class="hiddenExplain6">&emsp;&emsp;연락처: 010-4879-3466</p>
+          </div>
+          
+          
+          
+          
+          
+          
+          
         </div>
-        <p class="explain">이름: 최진규</p>
-        <p class="explain">생년월일: 1997.05.08</p>
-        <p class="explain">학력: 안산대학교 컴퓨터 정보학과 졸업(2년)</p>
-        <p class="explain">이메일: lemondy97@gmail.com</p>
         
       </footer>
     </div>
