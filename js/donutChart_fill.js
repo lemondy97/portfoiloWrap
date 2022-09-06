@@ -20,16 +20,16 @@ const colorFn = (i, classname, color) => {
   classname.style.background = "conic-gradient(" + color + " 0% " + i + "%, #dedede " + i + "% 100%)";
 }
 
-makeChart(90, chart1, '#f5b914');
-makeChart(85, chart2, '#b428b4');
-makeChart(75, chart3, '#66d2ce');
-makeChart(65, chart4, '#98fb98');
-makeChart(60, chart5, '#CD2E57');
+makeChart(90, chart1, '#FF8200');
+makeChart(85, chart2, '#0078FF');
+makeChart(75, chart3, '#000057');
+makeChart(65, chart4, '#E7C618');
+makeChart(60, chart5, '#edacb1');
 
 const replay = () => {
-  makeChart(90, chart1, '#f5b914');
-  makeChart(85, chart2, '#b428b4');
-  makeChart(75, chart3, '#66d2ce');
-  makeChart(65, chart4, '#98fb98');
-  makeChart(60, chart5, '#CD2E57');
+  makeChart(90, chart1, '#FF8200');
+  makeChart(85, chart2, '#0078FF');
+  makeChart(75, chart3, '#000057');
+  makeChart(65, chart4, '#E7C618');
+  makeChart(60, chart5, '#edacb1');
 }

@@ -29,14 +29,14 @@
         header h1 { color: #fff; font-family: 'Eoe_Zno_M'; position: absolute; top: 70%; left: 33%; font-size: 40px; width: 32%; text-align: center; }
         .svg-holder { text-align: center; margin: 0 auto; position: relative; top: 35%; }
 
-        section { width: 100%; height: 100vh; position: relative; }
+        section { width: 100%; height: 100vh; position: relative; background-color: #17182f; }
 
-        #page3 { width: 100%; height: 100vh; text-align: center; background-image: url(../img/universe1.jpg); }
+        #page3 { width: 100%; height: 100vh; text-align: center; background-color: #17182f; }
 
         .page { margin: 0 auto; position: relative; }
 
-        canvas { position: absolute; z-index: -1; }
-        footer { width: 100%; height: 100vh; }
+        #page1 canvas { position: absolute; z-index: -1; }
+        footer { width: 100%; height: 100vh; background-color: #17182f; }
 
         #dot {width:80px; height:250px;  position: fixed; justify-content:center;
         align-items:center; display:flex;
@@ -129,7 +129,7 @@
       border-radius: 50%;
       }
 
-      #page2 #clickButton_container { width: 50%; height: 625px; background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%); text-align: center; margin: 0 auto; border-radius: 10%; border: 1px solid olivedrab; position: relative; }
+      #page2 #clickButton_container { width: 50%; height: 625px; background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%); text-align: center; margin: 0 auto; border-radius: 10%; border: 1px solid #fff; position: relative; }
       #clickButton_container .page2_clickButton { width: 90px; height: 90px; background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); border: 3px solid #fff; cursor: pointer; border-radius: 25%; display: flex; }
       .page2_clickButton img { vertical-align: middle; transition: 0.3s; }
       .page2_clickButton img:hover { transform: rotate(-20deg); }
@@ -210,12 +210,12 @@
         #page3Wrap .hashTag { color: #FFB400; font-size: 16px; font-family: 'Literata', serif; margin-top: 25px; }
         .hashTag span { border: 0.15vw solid #FFB400; border-radius: 5vw; margin-left: 10px; padding-left: 10px; padding-right: 10px; }
 
-        footer #introduceContainer { width: 75%; height: 675px; background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%); text-align: center; margin: 0 auto; border-radius: 10%; border: 1px solid wheat; position: relative; }
+        footer #introduceContainer { width: 75%; height: 675px; background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%); text-align: center; margin: 0 auto; border-radius: 10%; border: 1px solid #fff; position: relative; }
 
         footer .page4_subject { font-size: 60px; text-align: center; padding-top: 75px; padding-bottom: 25px; color: #fff; font-family: 'Rowdies', cursive; }
         footer .footerSubject2 { font-size: 30px; position: absolute; top: 3%; left: 63.5%; color: #333; font-family: 'Rowdies', cursive; }
         footer .footerSubject3 { font-size: 30px; position: absolute; top: 61%; left: 63.5%; color: #333; font-family: 'Rowdies', cursive; }
-        footer .copyright { font-size: 17px; color: #fff; position: absolute; top: 105%; left: 32%; width: 410px; font-family: 'Noto Sans KR', sans-serif; }
+        footer .copyright { font-size: 14px; color: #fff; position: absolute; top: 105%; left: 32%; width: 410px; font-family: 'Noto Sans KR', sans-serif; }
         footer #informationBox { font-size: 15px; color: #444; font-family: 'RIDIBatang'; position: absolute; top: 63%; left: 0%; width: 600px; }
 
         footer .pictureBox { background-color: white; width: 300px; height: 300px; text-align: left; border-radius: 50%; margin-bottom: 25px; margin-top: 85px; margin-left: 145px; }
@@ -266,11 +266,11 @@
         }
         60% {
           stroke-dashoffset: 0;
-          fill: #b46af1;
+          fill: #7878AA;
         }
         100% {
           stroke-dashoffset: 0;
-          fill: #b46af1;
+          fill: #7878AA;
         }
         
         }
@@ -281,14 +281,15 @@
         }
         60% {
           stroke-dashoffset: 0;
-          fill: #b46af1;
+          fill: #7878AA;
         }
         100% {
           stroke-dashoffset: 0;
-          fill: #b46af1;
+          fill: #7878AA;
         }
         
         }
+
 
         #canvas1 {
         position: absolute;
@@ -299,4 +300,25 @@
         height: 100%;
         z-index: -1;
       }
+
+      #page2 canvas {
+        display: block;
+        vertical-align: bottom;
+      }
+
+      #particles-js {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+
+      .home-area{
+        background: url("images/4.jpeg");
+        height: 100vh;
+        width: 100%;
+        -webkit-background-size:cover;
+        background-size:cover;
+        background-position: center;
+
+    }
 
