@@ -218,11 +218,11 @@
         footer .pictureBox { background-color: white; width: 300px; height: 300px; text-align: left; border-radius: 50%; margin-bottom: 25px; margin-top: 85px; margin-left: 145px; }
         footer .hiddenExplain1, .hiddenExplain2, .hiddenExplain3, .hiddenExplain4, .hiddenExplain5, .hiddenExplain6 { text-align: center; font-family: 'ChosunSg'; opacity: 0; transition: all 0.5s; }
         footer .hiddenExplain1 { position: absolute; top: 52%; left: -0.5%; color: #333; width: 100%; font-size: 25px;  }
-        footer .hiddenExplain2 { position: absolute; top: 22%; left: 0%; color: #fff; width: 100%; font-size: 25px;  }
-        footer .hiddenExplain3 { position: absolute; top: 22%; left: 0%; color: #fff; width: 100%; font-size: 23px;  }
-        footer .hiddenExplain4 { position: absolute; top: 22%; left: 0%; color: #fff; width: 100%; font-size: 20.5px;  }
-        footer .hiddenExplain5 { position: absolute; top: 22%; left: -0.5%; color: #fff; width: 100%; font-size: 25px;  }
-        footer .hiddenExplain6 { position: absolute; top: 22%; left: 0%; color: #fff; width: 100%; font-size: 25px;  }
+        footer .hiddenExplain2 { position: absolute; top: 50%; left: 0%; transform: translateY(-50%); color: #fff; width: 100%; font-size: 25px;  }
+        footer .hiddenExplain3 { position: absolute; top: 50%; left: 0%; transform: translateY(-50%); color: #fff; width: 100%; font-size: 23px;  }
+        footer .hiddenExplain4 { position: absolute; top: 50%; left: 0%; transform: translateY(-50%); color: #fff; width: 100%; font-size: 20.5px;  }
+        footer .hiddenExplain5 { position: absolute; top: 50%; left: 0%; transform: translateY(-50%); color: #fff; width: 100%; font-size: 25px;  }
+        footer .hiddenExplain6 { position: absolute; top: 50%; left: 0%; transform: translateY(-50%); color: #fff; width: 100%; font-size: 25px;  }
 
         footer .hoverBox { width: 200px; height: 150px; cursor: pointer; background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%); border-radius: 50px; transition: all 0.5s ease; }
         .hoverBox img { transition: all 0.5s; }
