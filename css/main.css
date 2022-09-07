@@ -14,11 +14,11 @@
         }
 
         @font-face {
-            font-family: 'RIDIBatang';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
+          font-family: 'ChosunSg';
+          src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunSg.woff') format('woff');
+          font-weight: normal;
+          font-style: normal;
+      }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         ul, ol, li { list-style: none; }
@@ -129,7 +129,7 @@
       border-radius: 50%;
       }
 
-      #page2 #clickButton_container { width: 50%; height: 625px; background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%); text-align: center; margin: 0 auto; border-radius: 10%; border: 1px solid #fff; position: relative; }
+      #page2 #clickButton_container { width: 50%; height: 625px; background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%); text-align: center; margin: 0 auto; border-radius: 75px; border: 1px solid #fff; position: relative; }
       #clickButton_container .page2_clickButton { width: 90px; height: 90px; background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); border: 3px solid #fff; cursor: pointer; border-radius: 25%; display: flex; }
       .page2_clickButton img { vertical-align: middle; transition: 0.3s; }
       .page2_clickButton img:hover { transform: rotate(-20deg); }
@@ -145,7 +145,7 @@
       .showIcons img { transition: 0.3s; }
       .showIcons img:hover { transform: rotate(-40deg) scale(1.35); }
 
-      #page2 #showContainer2 { width: 300px; font-family: 'RIDIBatang'; font-size: 18px; color: #fff; position: absolute; top: 78%; left: 35%;  }
+      #page2 #showContainer2 { width: 300px; font-family: 'ChosunSg'; font-size: 18px; color: #fff; position: absolute; top: 78%; left: 35%;  }
     
         #page3Wrap {
             width: 100vw;
@@ -163,7 +163,7 @@
         #page3Wrap .page3_subject { font-size: 60px; color: #fff; font-family: 'Eoe_Zno_M'; font-family: 'Rowdies', cursive; margin-top: 100px; }
 
         #page3Wrap .noteBook { width: 800px; height: 599px; overflow: hidden; position: relative; margin: 0 auto;
-        background-image: url(../img/notebookLayout.png); background-repeat: no-repeat; top: 10%; left: 35%; margin-top: 100px; }
+        background-image: url(../img/notebookLayout.png); background-repeat: no-repeat; margin-top: 100px; }
         .noteBook .movingBox { width: 594px; height: 369.5px; overflow: hidden; position: absolute; top: 4.7%; left: 12.95%; }
         .movingBox img { width: 100%; animation: Full 6s linear infinite alternate; }
         .movingBox:not(:first-of-type){ display: none; }
@@ -177,25 +177,27 @@
         #page3Wrap .portfolioImage{
             position: absolute;
             transition: 500ms cubic-bezier(1, 0, 0, 1);
+            top: 18%;
+            left: 14%;
         }
     
         .controlButton {
             position: absolute;
-            bottom: 18.5%;
-            right: 17%;
+            bottom: 20.5%;
+            right: 21%;
             z-index: 100;
         }
 
-        #page3Wrap #textContainer { width: 35%; height: 400px; background-image: linear-gradient(-225deg, #3D4E81 0%, #5753C9 48%, #6E7FF3 100%); text-align: center; margin: 0 auto; border-radius: 10%; border: 1px solid #fff; position: absolute; top: 30%; left: 60%; }
 
         #page3Wrap .UpDownBox {position: relative; margin:20px; box-shadow: 1px 1px 3px rgba(0,0,0,0.3); cursor: pointer; overflow: hidden; width:150px; height: 50px; background: linear-gradient( 120deg, #00008C 0%, #64A0FF ); border-radius:50px; line-height: 50px; font-family: 'Oleo Script Swash Caps', cursive; color: #fff; font-size: 28px; }
         .UpDownBox .UpDown {position: absolute; left: -200%; top:auto; bottom: 0; right: 0; background:linear-gradient( to left, #46AAFF	, #3C3C8C ); color: #fff; width:150px; height: 50px; transition: all 0.4s ease-in-out; font-size:28px; margin:20px 0 0 50px; font-family: 'Oleo Script Swash Caps', cursive; }
         .UpDownBox:hover .UpDown {opacity:1; left: 0; margin:20px 0 0 0;}
 
-        #page3Wrap .hiddenText { position: absolute; top: 0%; right: 0%; font-size: 20px; color: #fff; width: 100%; height: 50%; font-family: 'RIDIBatang'; padding-left: 15px; padding-right: 15px; }
+        #page3Wrap .hiddenText { position: absolute; top: 29%; right: 8%; font-size: 20px; color: #fff; width: 35%; height: 50%; font-family: 'ChosunSg'; padding-left: 15px; padding-right: 15px; }
 
         .hiddenText h1 { font-family: 'Eoe_Zno_M'; padding-bottom: 30px; padding-top: 25px; }
-        .hiddenText b { color: #FF5675; }
+        .hiddenText b { color: #FFB0CF; }
+        .hiddenText p { line-height: 25px; }
 
         #page3Wrap #dotContainer2 { text-align: center; position: absolute; top: 85%; left: 31.2%; }
         #page3Wrap .dot2 { width: 20px; height: 20px; margin: 0 2px; background-color: #bbb; border-radius: 50%; display: inline-block; transition: background-color 0.5s ease; }
@@ -204,16 +206,17 @@
         #page3Wrap .hashTag { color: #FFB400; font-size: 16px; font-family: 'Literata', serif; margin-top: 25px; }
         .hashTag span { border: 0.15vw solid #FFB400; border-radius: 5vw; margin-left: 10px; padding-left: 10px; padding-right: 10px; }
 
-        footer #introduceContainer { width: 75%; height: 675px; background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%); text-align: center; margin: 0 auto; border-radius: 10%; border: 1px solid #fff; position: relative; }
+        footer #introduceContainer { width: 75%; height: 675px; background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%); text-align: center; margin: 0 auto; border-radius: 75px; border: 1px solid #fff; position: relative; }
 
         footer .page4_subject { font-size: 60px; text-align: center; padding-top: 75px; padding-bottom: 25px; color: #fff; font-family: 'Rowdies', cursive; }
         footer .footerSubject2 { font-size: 30px; position: absolute; top: 3%; left: 63.5%; color: #333; font-family: 'Rowdies', cursive; }
         footer .footerSubject3 { font-size: 30px; position: absolute; top: 61%; left: 63.5%; color: #333; font-family: 'Rowdies', cursive; }
         footer .copyright { font-size: 14px; color: #fff; position: absolute; top: 105%; left: 32%; width: 410px; font-family: 'Noto Sans KR', sans-serif; }
-        footer #informationBox { font-size: 15px; color: #444; font-family: 'RIDIBatang'; position: absolute; top: 63%; left: 0%; width: 600px; }
+        footer #informationBox { font-size: 18px; color: #000; font-family: 'ChosunSg'; position: absolute; top: 63%; left: 0%; width: 600px; }
+        #informationBox p { line-height: 25px; }
 
         footer .pictureBox { background-color: white; width: 300px; height: 300px; text-align: left; border-radius: 50%; margin-bottom: 25px; margin-top: 85px; margin-left: 145px; }
-        footer .hiddenExplain1, .hiddenExplain2, .hiddenExplain3, .hiddenExplain4, .hiddenExplain5, .hiddenExplain6 { text-align: center; font-family: 'RIDIBatang'; opacity: 0; transition: all 0.5s; }
+        footer .hiddenExplain1, .hiddenExplain2, .hiddenExplain3, .hiddenExplain4, .hiddenExplain5, .hiddenExplain6 { text-align: center; font-family: 'ChosunSg'; opacity: 0; transition: all 0.5s; }
         footer .hiddenExplain1 { position: absolute; top: 52%; left: -0.5%; color: #333; width: 100%; font-size: 25px;  }
         footer .hiddenExplain2 { position: absolute; top: 22%; left: 0%; color: #fff; width: 100%; font-size: 25px;  }
         footer .hiddenExplain3 { position: absolute; top: 22%; left: 0%; color: #fff; width: 100%; font-size: 23px;  }
@@ -221,7 +224,7 @@
         footer .hiddenExplain5 { position: absolute; top: 22%; left: -0.5%; color: #fff; width: 100%; font-size: 25px;  }
         footer .hiddenExplain6 { position: absolute; top: 22%; left: 0%; color: #fff; width: 100%; font-size: 25px;  }
 
-        footer .hoverBox { width: 200px; height: 150px; cursor: pointer; background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%); border-radius: 25%; transition: all 0.5s ease; }
+        footer .hoverBox { width: 200px; height: 150px; cursor: pointer; background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%); border-radius: 50px; transition: all 0.5s ease; }
         .hoverBox img { transition: all 0.5s; }
 
         .hoverBox:nth-of-type(2) { position: absolute; top: 10%; left:50%; }
