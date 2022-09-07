@@ -154,15 +154,7 @@
             overflow: hidden;
         }
     
-        #page3Wrap,
-        .portfolioImage {
-            height: 100vh;
-            width: 100%;
-            overflow: hidden;
-            
-            background-repeat: no-repeat;
-        }
-    
+
     
         .portfolioImage {
             position: relative;
@@ -170,8 +162,8 @@
 
         #page3Wrap .page3_subject { font-size: 60px; color: #fff; font-family: 'Eoe_Zno_M'; font-family: 'Rowdies', cursive; margin-top: 100px; }
 
-        .portfolioImage .noteBook { width: 800px; height: 599px; overflow: hidden; position: relative; margin: 0 auto;
-        background-image: url(../img/notebookLayout.png); background-repeat: no-repeat; top: 10%; right: 15%; }
+        #page3Wrap .noteBook { width: 800px; height: 599px; overflow: hidden; position: relative; margin: 0 auto;
+        background-image: url(../img/notebookLayout.png); background-repeat: no-repeat; top: 10%; left: 35%; margin-top: 100px; }
         .noteBook .movingBox { width: 594px; height: 369.5px; overflow: hidden; position: absolute; top: 4.7%; left: 12.95%; }
         .movingBox img { width: 100%; animation: Full 6s linear infinite alternate; }
         .movingBox:not(:first-of-type){ display: none; }
@@ -190,17 +182,19 @@
         .controlButton {
             position: absolute;
             bottom: 18.5%;
-            right: 22.5%;
+            right: 17%;
             z-index: 100;
         }
+
+        #page3Wrap #textContainer { width: 35%; height: 400px; background-image: linear-gradient(-225deg, #3D4E81 0%, #5753C9 48%, #6E7FF3 100%); text-align: center; margin: 0 auto; border-radius: 10%; border: 1px solid #fff; position: absolute; top: 30%; left: 60%; }
 
         #page3Wrap .UpDownBox {position: relative; margin:20px; box-shadow: 1px 1px 3px rgba(0,0,0,0.3); cursor: pointer; overflow: hidden; width:150px; height: 50px; background: linear-gradient( 120deg, #00008C 0%, #64A0FF ); border-radius:50px; line-height: 50px; font-family: 'Oleo Script Swash Caps', cursive; color: #fff; font-size: 28px; }
         .UpDownBox .UpDown {position: absolute; left: -200%; top:auto; bottom: 0; right: 0; background:linear-gradient( to left, #46AAFF	, #3C3C8C ); color: #fff; width:150px; height: 50px; transition: all 0.4s ease-in-out; font-size:28px; margin:20px 0 0 50px; font-family: 'Oleo Script Swash Caps', cursive; }
         .UpDownBox:hover .UpDown {opacity:1; left: 0; margin:20px 0 0 0;}
 
-        #page3Wrap .hiddenText { position: absolute; top: 5%; right: 8%; font-size: 20px; color: #fff; width: 35%; height: 50%; font-family: 'RIDIBatang'; }
+        #page3Wrap .hiddenText { position: absolute; top: 0%; right: 0%; font-size: 20px; color: #fff; width: 100%; height: 50%; font-family: 'RIDIBatang'; padding-left: 15px; padding-right: 15px; }
 
-        .hiddenText h1 { font-family: 'Eoe_Zno_M'; padding-bottom: 30px; padding-top: 270px; }
+        .hiddenText h1 { font-family: 'Eoe_Zno_M'; padding-bottom: 30px; padding-top: 25px; }
         .hiddenText b { color: #FF5675; }
 
         #page3Wrap #dotContainer2 { text-align: center; position: absolute; top: 85%; left: 31.2%; }
@@ -303,7 +297,6 @@
 
       #page2 canvas {
         display: block;
-        vertical-align: bottom;
       }
 
       #particles-js {
@@ -313,12 +306,13 @@
       }
 
       .home-area{
-        background: url("images/4.jpeg");
         height: 100vh;
         width: 100%;
         -webkit-background-size:cover;
         background-size:cover;
         background-position: center;
+        position: absolute;
+
 
     }
 
